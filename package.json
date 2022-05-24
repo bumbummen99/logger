@@ -1,5 +1,5 @@
 {
-  "name": "logger",
+  "name": "@skyraptor/logger",
   "description": "Just a small logger class using chalk.",
   "scripts": {
     "build": "rimraf ./build && tsc",
