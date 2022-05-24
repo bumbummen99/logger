@@ -1,6 +1,5 @@
 {
   "name": "logger",
-  "version": "1.0.0",
   "description": "Just a small logger class using chalk.",
   "scripts": {
     "build": "rimraf ./build && tsc",
