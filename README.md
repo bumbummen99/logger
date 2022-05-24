@@ -1,4 +1,7 @@
 # logger
+
+[![CI](https://github.com/bumbummen99/logger/actions/workflows/CI.yml/badge.svg)](https://github.com/bumbummen99/logger/actions/workflows/CI.yml)
+
 Just a small logger class using chalk.
 
 Based on the [Logger class from SquadJS](https://github.com/Team-Silver-Sphere/SquadJS/blob/master/core/logger.js)
