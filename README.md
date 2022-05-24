@@ -6,12 +6,12 @@ Based on the [Logger class from SquadJS](https://github.com/Team-Silver-Sphere/S
 ## Installation
 You can install logger using the following command
 ```
-npm install logger
+npm install @skyraptor/logger
 ```
 
 ## Usage
 ```
-import Logger from 'logger'
+import Logger from '@skyraptor/logger'
 import chalk from 'chalk'
 
 // Determine how much to show of a module
