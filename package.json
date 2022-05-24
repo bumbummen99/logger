@@ -3,7 +3,7 @@
   "description": "Just a small logger class using chalk.",
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Patrick Henninger",
   "license": "BSL",
