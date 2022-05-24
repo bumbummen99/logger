@@ -12,7 +12,7 @@ class Logger {
     verboseness: VerbosityMap = {}
     colors: ColorMap = {}
 
-    verbose(module, verboseness, message, ...extras) {
+    verbose(module: string, verboseness: number, message: string, ...extras: any[]) {
         let colorFunction: ChalkInstance = chalk.white
         if (module in this.colors) {
             if (typeof this.colors[module] === 'string' && this.colors[module] as string in chalk) {
@@ -27,7 +27,7 @@ class Logger {
         }
     }
 
-    setVerboseness(module, verboseness) {
+    setVerboseness(module: string, verboseness: number) {
         this.verboseness[module] = verboseness
     }
 
