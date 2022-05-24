@@ -16,7 +16,7 @@ class Logger {
         let colorFunction: ChalkInstance = chalk.white
         if (module in this.colors) {
             if (typeof this.colors[module] === 'string' && this.colors[module] as string in chalk) {
-                colorFunction = chalk[this.colors[module] as string]
+                colorFunction = chalk[this.colors[module] as string] as ChalkInstance
             } else if (typeof this.colors[module] === 'function') {
                 colorFunction = this.colors[module] as ChalkInstance
             }
