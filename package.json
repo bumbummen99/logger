@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "Just a small logger class using chalk.",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Henninger",
+  "license": "BSL",
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}
