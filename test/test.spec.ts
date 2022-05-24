@@ -1,32 +1,25 @@
-import chai, { expect } from 'chai'
-import sinon from 'sinon'
-import sinonChai from 'sinon-chai'
-chai.use(sinonChai)
-import Logger from '../src/index.js'
+import { jest } from '@jest/globals'
+import Logger from '../src/index'
 
-describe('Logger', function() {
+test('should log not to the console if verbosity is too low', () => {
+  const mock = jest.fn()
+  console.log = mock
 
-  this.beforeEach(function() {
-    this.stub = sinon.stub(global.console, 'log')
-  })
+  Logger.setVerboseness('Test', 4)
+  Logger.verbose('Test', 3, 'Hello, World!')
 
-  this.afterEach(function() {
-    this.stub.restore()
-  })
+  expect(mock.mock.calls.length).toBeTruthy()
+  // @ts-ignore
+  expect(mock.mock.lastCall[0]).toBe('[Test][3] Hello, World!')
+})
 
-  it('should log to the console', function() {
-    Logger.setVerboseness('Test', 4)
-    Logger.verbose('Test', 3, 'Hello, World!')
-    // @ts-ignore
-    expect( console.log.calledOnce ).to.be.true
-    // @ts-ignore
-    expect( console.log.calledWith('[Test][3] Hello, World!') ).to.be.true;
-  })
 
-  it('should log not to the console if verbosity is too low', function() {
-    Logger.setVerboseness('Test', 1)
-    Logger.verbose('Test', 3, 'Hello, World!')
-    // @ts-ignore
-    expect( console.log.calledOnce ).to.be.false
-  })
+test('should log not to the console if verbosity is too low', () => {
+  const mock = jest.fn()
+  console.log = mock
+
+  Logger.setVerboseness('Test', 1)
+  Logger.verbose('Test', 3, 'Hello, World!')
+
+  expect(mock.mock.calls.length).toBeFalsy()
 })
