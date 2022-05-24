@@ -1,0 +1,23 @@
+name: Publish
+on:
+  release:
+    types: [published]
+    
+jobs:
+  runs-on: ubuntu-22.04
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+
+  - name: Install dependencies
+    run: npm install
+
+  - name: Set version
+    run: npm version ${GITHUB_REF#refs/*/}
+    
+  - name: Build
+    run: npm run build
+    
+  - uses: JS-DevTools/npm-publish@v1
+    with:
+      token: ${{ secrets.NPM_TOKEN }}
