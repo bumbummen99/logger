@@ -1,11 +1,11 @@
-import chalk, { ChalkInstance } from 'chalk'
+import chalk, { ChalkInstance, Color } from 'chalk'
 
 declare type VerbosityMap = {
     [key: string]: number
 }
 
 declare type ColorMap = {
-    [key: string]: ChalkInstance|string
+    [key: string]: ChalkInstance|Color
 }
 
 class Logger {
@@ -31,7 +31,7 @@ class Logger {
         this.verboseness[module] = verboseness
     }
 
-    setColor(module: string, color: ChalkInstance|string) {
+    setColor(module: string, color: ChalkInstance|Color) {
         this.colors[module] = color
     }
 }
