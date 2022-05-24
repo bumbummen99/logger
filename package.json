@@ -3,7 +3,7 @@
   "description": "Just a small logger class using chalk.",
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "test": "mocha"
+    "test": "mocha -r ts-node/register"
   },
   "author": "Patrick Henninger",
   "license": "BSL",
