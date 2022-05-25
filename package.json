@@ -8,10 +8,9 @@
     "compile": "rimraf ./build && tsc",
     "fix": "gts fix",
     "prepare": "npm run compile",
-    "pretest": "npm run compile",
+    "pretest": "patch-package && npm run compile",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
-    "posttest": "npm run lint",
-    "postinstall": "patch-package"
+    "posttest": "npm run lint"
   },
   "main": "build/index.js",
   "author": "Patrick Henninger",
