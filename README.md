@@ -1,5 +1,7 @@
 # logger
 
+[![Coverage Status](https://codecov.io/gh/chalk/chalk/branch/main/graph/badge.svg)](https://codecov.io/gh/chalk/chalk)
+[![npm dependents](https://badgen.net/npm/dependents/@skyraptor/logger)](https://www.npmjs.com/package/@skyraptor/logger?activeTab=dependents) [![Downloads](https://badgen.net/npm/dt/@skyraptor/logger)](https://www.npmjs.com/package/@skyraptor/logger)
 [![CI](https://github.com/bumbummen99/logger/actions/workflows/CI.yml/badge.svg)](https://github.com/bumbummen99/logger/actions/workflows/CI.yml)
 
 Just a small logger class using chalk.
