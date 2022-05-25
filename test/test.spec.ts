@@ -9,7 +9,6 @@ test('should log not to the console if verbosity is too low', () => {
   Logger.verbose('Test', 3, 'Hello, World!')
 
   expect(mock.mock.calls.length).toBeTruthy()
-  // @ts-ignore
   expect(mock.mock.lastCall[0]).toBe('[Test][3] Hello, World!')
 })
 
