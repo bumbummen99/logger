@@ -5,5 +5,6 @@ export default async (): Promise<InitialOptionsTsJest> => {
   return {
     preset: 'ts-jest/presets/js-with-ts-esm',
     verbose: true,
+    extensionsToTreatAsEsm: ['.ts']
   };
 };
