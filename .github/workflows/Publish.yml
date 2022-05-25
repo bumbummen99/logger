@@ -17,7 +17,7 @@ jobs:
       run: npm version --no-git-tag-version ${GITHUB_REF#refs/*/}
 
     - name: Build
-      run: npm run build
+      run: npm run compile
 
     - uses: JS-DevTools/npm-publish@v1
       with:
