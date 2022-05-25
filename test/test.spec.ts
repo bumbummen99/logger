@@ -1,4 +1,4 @@
-import * as Logger from'../src/index';
+import Logger from '../src/index';
 
 test('should log not to the console if verbosity is too low', () => {
   const mock = jest.fn();
