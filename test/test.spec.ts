@@ -1,5 +1,4 @@
-//const { jest } = require('@jest/globals').jest;
-const Logger = require('../src/index');
+import * as Logger from'../src/index';
 
 test('should log not to the console if verbosity is too low', () => {
   const mock = jest.fn();
