@@ -8,8 +8,8 @@
     "compile": "rimraf ./build && tsc",
     "fix": "gts fix",
     "prepare": "npm run compile",
-    "pretest": "patch-package && npm run compile",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "pretest": "patch-package &&npm run compile",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
     "posttest": "npm run lint"
   },
   "main": "build/index.js",
