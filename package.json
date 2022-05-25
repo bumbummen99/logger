@@ -3,13 +3,13 @@
   "description": "Just a small logger class using chalk.",
   "type": "module",
   "scripts": {
-    "build": "rimraf ./build && tsc",
     "lint": "gts lint",
     "clean": "gts clean",
-    "compile": "tsc",
+    "compile": "rimraf ./build && tsc",
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
+    "test": "jest",
     "posttest": "npm run lint"
   },
   "main": "build/index.js",
