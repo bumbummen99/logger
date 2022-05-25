@@ -10,7 +10,9 @@ test('should log not to the console if verbosity is too low', () => {
   Logger.verbose('Test', 3, 'Hello, World!');
 
   expect(mock.mock.calls.length).toBeTruthy();
-  expect(mock.mock.lastCall[0]).toBe(`[${chalk.white('Test')}][3] Hello, World!`);
+  expect(mock.mock.lastCall[0]).toBe(
+    `[${chalk.white('Test')}][3] Hello, World!`
+  );
 });
 
 test('should log not to the console if verbosity is too low', () => {
