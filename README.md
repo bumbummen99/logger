@@ -15,7 +15,7 @@ npm install @skyraptor/logger
 ```
 
 ## Usage
-```
+```js
 import Logger from '@skyraptor/logger'
 import chalk from 'chalk'
 
