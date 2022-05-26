@@ -1,3 +1,5 @@
+jest.mock('chalk')
+
 import { jest } from '@jest/globals';
 import chalk from 'chalk';
 import Logger from '../src/index';
