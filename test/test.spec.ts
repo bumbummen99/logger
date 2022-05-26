@@ -1,10 +1,10 @@
 import { jest } from '@jest/globals';
-import chalk from 'chalk';
 import Logger from '../src/index';
 
 jest.mock('chalk')
 
-test('should log not to the console if verbosity is too low', () => {
+test('should log not to the console if verbosity is too low', async () => {
+  const chalk = await import('chalk');
   const mock = jest.fn();
   console.log = mock;
 
