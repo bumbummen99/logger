@@ -8,7 +8,7 @@
     "compile": "rimraf ./build && tsc",
     "fix": "gts fix",
     "prepare": "npm run compile",
-    "pretest": "patch-package &&npm run compile",
+    "pretest": "npm run compile",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
     "posttest": "npm run lint"
   },
@@ -24,8 +24,7 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.3",
     "ts-node": "^10.8.0",
-    "typescript": "^4.7.2",
-    "patch-package": "^6.4.7"
+    "typescript": "^4.7.2"
   },
   "dependencies": {
     "chalk": "^5.0.1"
