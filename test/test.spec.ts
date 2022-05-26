@@ -1,8 +1,8 @@
-jest.mock('chalk')
-
 import { jest } from '@jest/globals';
 import chalk from 'chalk';
 import Logger from '../src/index';
+
+jest.mock('chalk')
 
 test('should log not to the console if verbosity is too low', () => {
   const mock = jest.fn();
