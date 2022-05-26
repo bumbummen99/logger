@@ -4,7 +4,6 @@ import Logger from '../src/index';
 jest.mock('chalk')
 
 test('should log not to the console if verbosity is too low', async () => {
-  const chalk = await import('chalk');
   const mock = jest.fn();
   console.log = mock;
 
@@ -13,7 +12,7 @@ test('should log not to the console if verbosity is too low', async () => {
 
   expect(mock.mock.calls.length).toBeTruthy();
   expect(mock.mock.lastCall[0]).toBe(
-    `[${chalk.white('Test')}][3] Hello, World!`
+    `[Test][3] Hello, World!`
   );
 });
 
