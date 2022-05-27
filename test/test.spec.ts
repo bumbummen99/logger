@@ -1,8 +1,9 @@
 import { jest } from '@jest/globals';
-import chalk from 'chalk';
 import Logger from '../src/index';
 
-test('should log not to the console if verbosity is too low', () => {
+jest.mock('chalk')
+
+test('should log not to the console if verbosity is too low', async () => {
   const mock = jest.fn();
   console.log = mock;
 
@@ -11,7 +12,7 @@ test('should log not to the console if verbosity is too low', () => {
 
   expect(mock.mock.calls.length).toBeTruthy();
   expect(mock.mock.lastCall[0]).toBe(
-    `[${chalk.white('Test')}][3] Hello, World!`
+    `[Test][3] Hello, World!`
   );
 });
 
